@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAY — Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+      <div class="loader-card">
+        <span class="loader-dot" aria-hidden="true"></span>
+        <div>
+          <p class="loader-title">STAY loading...</p>
+          <p class="loader-subtitle">Preparing the newest updates.</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="logo">STAY</div>
+      <nav class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="discography.html">Discography</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="hero" id="hero-banner">
+        <div class="hero-content">
+          <p class="hero-eyebrow">New era, timeless vibe</p>
+          <h1>Welcome home, STAY.</h1>
+          <p class="hero-copy">
+            Discover the newest updates, curated releases, and member highlights — all
+            arranged from latest to oldest.
+          </p>
+          <div class="hero-actions">
+            <button class="ghost" data-scroll="entry-form">Add a new entry</button>
+            <a class="primary" href="members.html">Meet the members</a>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Stage lights illustration"></div>
+      </section>
+
+      <section class="panel" id="entry-form">
+        <div>
+          <h2>Add a new update</h2>
+          <p class="muted">
+            Post a new entry for STAY. Entries are saved locally in your browser.
+          </p>
+        </div>
+        <form class="form-grid" id="home-entry-form">
+          <label>
+            Title
+            <input name="title" type="text" placeholder="New release teaser" required />
+          </label>
+          <label>
+            Date
+            <input name="date" type="date" required />
+          </label>
+          <label class="full">
+            Summary
+            <textarea name="summary" rows="3" placeholder="Share what just happened" required></textarea>
+          </label>
+          <label>
+            Tag
+            <input name="tag" type="text" placeholder="Announcement" />
+          </label>
+          <label>
+            Highlight link
+            <input name="link" type="url" placeholder="https://" />
+          </label>
+          <button class="primary" type="submit">Publish entry</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Latest entries</h2>
+          <button class="ghost" id="clear-home-entries">Clear entries</button>
+        </div>
+        <div class="entry-list" id="home-entry-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>STAY — fanmade interactive archive. Keep shining.</p>
+    </footer>
+  </body>
+</html>

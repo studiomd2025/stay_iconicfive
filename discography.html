@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAY — Discography</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+      <div class="loader-card">
+        <span class="loader-dot" aria-hidden="true"></span>
+        <div>
+          <p class="loader-title">STAY loading...</p>
+          <p class="loader-subtitle">Syncing discography entries.</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="logo">STAY</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a class="active" href="discography.html">Discography</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-heading">
+        <h1>Discography</h1>
+        <p class="muted">
+          Track new releases and schedule upcoming drops. Entries are arranged newest to oldest.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div>
+          <h2>Add a release</h2>
+          <p class="muted">Save releases locally and keep notes for scheduled drops.</p>
+        </div>
+        <form class="form-grid" id="discography-form">
+          <label>
+            Title
+            <input name="title" type="text" placeholder="STAY - Midnight Run" required />
+          </label>
+          <label>
+            Release date
+            <input name="date" type="date" required />
+          </label>
+          <label>
+            Type
+            <input name="type" type="text" placeholder="Single / EP / Album" />
+          </label>
+          <label class="full">
+            Notes
+            <textarea name="notes" rows="3" placeholder="Teasers, track count, highlights"></textarea>
+          </label>
+          <button class="primary" type="submit">Save release</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Release timeline</h2>
+          <button class="ghost" id="clear-discography">Clear releases</button>
+        </div>
+        <div class="entry-list" id="discography-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Use the form to add new releases and keep the timeline fresh.</p>
+    </footer>
+  </body>
+</html>
