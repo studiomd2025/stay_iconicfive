@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAY — Members</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+      <div class="loader-card">
+        <span class="loader-dot" aria-hidden="true"></span>
+        <div>
+          <p class="loader-title">STAY loading...</p>
+          <p class="loader-subtitle">Preparing the member profiles.</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="logo">STAY</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="members.html">Members</a>
+        <a href="discography.html">Discography</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-heading">
+        <h1>Member profiles</h1>
+        <p class="muted">
+          Each profile supports scheduled hero images, auto-updating ages, and a space
+          to collect photo compilations.
+        </p>
+      </section>
+
+      <section class="member-grid" id="member-grid"></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Want to schedule a new profile image? Update the dates in <span>script.js</span>.</p>
+    </footer>
+  </body>
+</html>
